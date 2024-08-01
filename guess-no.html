@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        min=25;
+        max=50;
+ let randomNum = Math.floor(Math.random()* (max-min+1)+min)
+let guess;
+let attempts = 0;
+let flag ="true";
+while (flag){
+    guess = parseInt(window.prompt("PLEASE ENTER A NUMBER BETWEEN BETWEEN 1  TO 100"));
+    if(isNaN(guess)){
+        window.alert("PLEASE ENTER A NUMBER ONLY");
+    }
+    else if(  guess<min || guess>max){
+        window.alert("INVALID INPUT");}
+    else{
+        attempts++;
+        if(guess<randomNum){
+            window.alert("YOUR NUMBER IS TOO LOW");}
+        else if(guess>randomNum){
+            window.alert("YOUR NUMBER IS TOO HIGH");}
+            else{
+                window.alert("congratulations || you took" + attempts + "attempts to guess");
+                flag="false"
+                break
+        }
+        }
+    }
+    </script>
+    </body>
+    </html>
